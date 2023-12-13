@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block body %}
+<!-- <img src=""><br>
+<br>
+{{script.desc}}<br>
+<a class="btn btn-warning" href="{% url 'movieapp:update' script.id %}">update</a>
+<a class="btn btn-danger" href="{% url 'movieapp:delete' script.id %}">delete</a>  -->
+
+<br>
+<div class="container">
+<div class="row">
+ <div class="col-md-12">   
+<div class="card mb-3" >
+    <div class="row no-gutters">
+      <div class="col-md-4">
+        <img src="{{script.img.url}}" class="card-img" alt="..." >
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h2 class="card-title" style="text-align: center; font-family: 'Times New Roman', Times, serif; font-size: 50px; text-transform: uppercase;">{{script.name}}</h2>
+          <hr style="border: 2;"
+          <p class="card-text">{{script.desc}}</p>
+          <p class="card-text" style="padding-top: 15%; text-align: right;"><a class="btn btn-warning" href="{% url 'movieapp:update' script.id %}">update</a>
+            <a class="btn btn-danger" href="{% url 'movieapp:delete' script.id %}">delete</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+{% endblock %}
